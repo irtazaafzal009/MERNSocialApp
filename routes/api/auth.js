@@ -15,6 +15,7 @@ router.get('/', auth, async (req, res)=>{
         console.error(err);
     }
 });
+
 router.post('/', [
     check('email', 'Please enter valid email').isEmail(),
     check('password', 'Password is required').exists()
